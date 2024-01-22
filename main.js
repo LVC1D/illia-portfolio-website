@@ -51,6 +51,7 @@ const addGitContext = () => {
     gitMore.innerHTML = 'With the help of bash and git commands, I can streamline the workflow of working on projects locally and remotely, whether that\'s independent or collaborative work on GitHub.';
     gitMore.style.fontSize = '0.7rem';
     gitMore.style.letterSpacing = '0.05rem';
+    gitMore.style.marginBottom = '5rem';
     document.getElementById('git-item').appendChild(gitMore);
     gitButton.style.display = 'none';
 }

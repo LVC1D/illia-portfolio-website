@@ -25,6 +25,7 @@ const addMixedContext = () => {
     mixedMore.innerHTML = 'No matter the size of the strings\' array, as long as you have 3 of those - the funciton ca take those and produce some random messages for your leisure.';
     mixedMore.style.fontSize = '0.7rem';
     mixedMore.style.letterSpacing = '0.05rem';
+    mixedMore.style.marginBottom = '5rem';
     document.getElementById('mixed-messages').appendChild(mixedMore);
     mixedButton.style.display = 'none';
 }

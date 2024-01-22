@@ -10,21 +10,45 @@
         url("./resources/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf") format('truetype');
 }
 
+@font-face {
+    font-family: 'Cinzel';
+    src: url("./resources/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf") format('truetype'),
+        url("./resources/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Gabarito';
+    src: url("./resources/fonts/Gabarito/static/Gabarito-Regular.ttf") format('truetype'),
+        url("./resources/fonts/Gabarito/static/Gabarito-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url("./resources/fonts/Podkova/static/Podkova-Regular.ttf") format('truetype'),
+        url("./resources/fonts/Podkova/static/Podkova-Bold.ttf") format('truetype');
+}
+
 * {
     box-sizing: border-box;
 }
 
 h1, h2, h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Podkova', serif;
 }
 
 p, footer, nav, label {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Gabarito', sans-serif;
 }
 
 main {
     position: relative;
     top: 80px;
+}
+
+#submit-btn,
+#mixed-more,
+#git-more {
+    margin-bottom: 5rem;
 }
 
 /* header */
@@ -128,6 +152,7 @@ nav li:visited {
 #projects-show {
     color: hsl(210, 32%, 22%);
     letter-spacing: 0.2rem;
+    height: auto;
 }
 
 #skills h2 {
@@ -163,7 +188,7 @@ form #submit-btn,
     border: 1px solid #280003;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Playfair Display';
+    font-family: 'Gabarito';
     width: auto;
     max-width: 150px;
     height: 30px;
@@ -175,7 +200,7 @@ form #submit-btn,
 
 #contact-details {
     text-align: center;
-    margin: 0 4%;
+    margin: 3rem 5% 3.5rem;
 }
 
 .contact-container {
@@ -243,23 +268,140 @@ form #submit-btn,
 
 form h3 {
     font-size: 1.75rem;
+    margin: 4rem auto 3rem;
 }
 
 /* Footer */
 
 footer {
-    display: flex;
-    width: 100%;
-    height: 3rem;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 100%;
     background-image: url('./resources/header-footer-bg.jpeg');
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
     color: rgb(231, 235, 236);
     margin: 0 2%;
+    font-size: 0.75rem;
+}
+
+
+/* Media Responsiveness */
+
+@media only screen and (max-width: 900px) {
+    /* header */
+    nav {
+        height: 4rem;
+    }
+
+    nav li {
+        margin: 0 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        width: 6rem;
+        text-align: center;
+        height: 2.25rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    #banner,
+    #proj-banner {
+        height: 300px;
+        z-index: 1;
+    }
+
+    #headings,
+    #proj-headings {
+        height: 100%;
+        z-index: 5;
+        position: relative;
+        color: rgb(231, 235, 236); 
+    }
+
+    #banner h1,
+    #proj-banner h1 {
+        font-size: 3rem;
+    }
+
+    #banner h2,
+    #proj-banner h2 {
+        font-size: 2rem;
+    }
+
+    /* Skills & projects */
+    #skills h2 {
+        font-size: 1.8rem;
+    }
+    
+    #skills h3,
+    #projects-show h3 {
+        font-size: 1.45rem;
+    }
+
+    #skills .container-item,
+    .project-item {
+        width: 500px;
+        height: auto;
+        text-align: center;
+    }
+
+    /* Contact Form */
+    #contact-details {
+        text-align: center;
+        margin: 1.5rem 3% 2.5rem;
+    }
+    
+    .contact-container {
+        margin: 0 1% 1rem;
+    }
+    
+    .contact-item {
+        width: 160px;
+        height: auto;
+        text-align: center;
+    }
+    
+    .contact-item a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+    
+    .contact-item img {
+        max-width: 80px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .form-fields {
+        display: block;
+        text-align: center;
+    }
+    
+    #contacts-one input,
+    #contacts-two input {
+        margin-bottom: 10px;
+        margin-top: 7px;
+        width: 300px;
+        height: 2.4rem;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    
+    #contact-details h2 {
+        font-size: 2rem;
+    }
+    
+    form h3 {
+        font-size: 1.5rem;
+        margin: 2rem auto 2rem;
+    }
 }
