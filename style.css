@@ -75,7 +75,8 @@ nav li:visited {
 
 /* Hero */
 
-#banner {
+#banner,
+#proj-banner {
     background-image: url('./resources/banner-bg.jpeg');
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +91,8 @@ nav li:visited {
     border-radius: 20px;
 }
 
-#banner::before {
+#banner::before,
+#proj-banner::before {
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
     content: '';
@@ -102,24 +104,28 @@ nav li:visited {
     filter: blur(50px);
 }
 
-#headings {
+#headings,
+#proj-headings {
     height: 50%;
     z-index: 5;
     position: relative;
     color: rgb(231, 235, 236); 
 }
 
-#banner h1 {
+#banner h1,
+#proj-banner h1 {
     font-size: 4rem;
 }
 
-#banner h2 {
+#banner h2,
+#proj-banner h2 {
     font-size: 3rem;
 }
 
-/* Skills */
+/* Skills & Projects */
 
-#skills {
+#skills,
+#projects-show {
     color: hsl(210, 32%, 22%);
     letter-spacing: 0.2rem;
 }
@@ -129,11 +135,13 @@ nav li:visited {
     font-size: 2.5rem;
 }
 
-#skills h3 {
+#skills h3,
+#projects-show h3 {
     font-size: 1.75rem;
 }
 
-#skills .container {
+#skills .container,
+.project-container {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
@@ -141,14 +149,16 @@ nav li:visited {
     margin: 0 2%;
 }
 
-#skills .container-item {
+#skills .container-item,
+.project-item {
     width: 250px;
     height: auto;
     text-align: center;
 }
 
 #skills .container-item input,
-form #submit-btn {
+form #submit-btn,
+.project-item input {
     background-color: white;
     border: 1px solid #280003;
     border-radius: 5px;
