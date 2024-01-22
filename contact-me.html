@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
-    <title>Contact Illia</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html">My Skills</a></li>
-                <li><a href="./projects.html">My Projects</a></li>
-                <li href="#">Contact Me</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form action="./contact-me.html" method="POST">
-            <h2>Let's get in touch!</h2>
-            <p>Fill in a simple form below to discuss opportunities.</p>
-            <label for="first-name">First name: </label>
-            <input type="text" id="first-name" name="first-name" required pattern="[a-zA-Z]+"/>
-            
-            <label for="last-name">Last name: </label>
-            <input type="text" id="last-name" name="last-name" required pattern="[a-zA-Z]+"/>
-            <br>
-            <label for="email">E-mail: </label>
-            <input type="email" id="email" name="email" required />
-          
-            <label for="phone">Phone number (optional): </label>
-            <input type="text" id="phone" name="phone" pattern="[0-9]{7, 11}" />
-            <br>
-            <input type="submit" value="Get in touch"/>
-        </form>
-    </main>
-    <footer>
-        <p>@2024 All Rights Reserved</p>
-        <p>Created with the help of Codecademy</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js" defer></script>
+        <title>Contact Illia</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <a href="./index.html"><li>Home</li></a>
+                    <a href="./index.html"><li>My Skills</li></a>
+                    <a href="./projects.html"><li>My Projects</li></a>
+                    <li href="#">Contact Me</li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contact-details">
+            <section>
+                <h2>Let's get in touch!</h2>
+                <div class="contact-container">
+                    <div class="contact-item" id="fb-contact">
+                        <h3>Facebook</h3>
+                        <img src="./resources/fb-logo.png" alt="facebook logo"/>
+                        <p><a href="https://www.facebook.com/profile.php?id=100007841673012" target="_blank">Visit Facebook</a></p>
+                    </div>
+                    <div class="contact-item" id="ig-contact">
+                        <h3>Instagram</h3>
+                        <img src="./resources/ig-logo.png" alt="instagram logo"/>
+                        <p><a href="https://www.instagram.com/hectorcryo.eth/" target="_blank">Visit Instagram</a></p>
+                    </div>
+                    <div class="contact-item" id="x-contact">
+                        <h3>X</h3>
+                        <img src="./resources/x-logo.png" alt="x logo"/>
+                        <p><a href="https://twitter.com/hectorcryo" target="_blank">Visit X</a></p>
+                    </div>
+                    <div class="contact-item" id="lkd-contact">
+                        <h3>Linkedin</h3>
+                        <img src="./resources/in-logo.png" alt="linkedin logo"/>
+                        <p><a href="https://www.linkedin.com/in/illia-berezovskyi-19b34814a/" target="_blank">Visit LinkedIn</a></p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <form action="./contact-me.html" method="POST">
+                    <h3>Or simply fill in a simple form below to discuss opportunities.</h3>
+                    <div class="form-fields">
+                        <div id="contacts-one">
+                            <label for="first-name">First name: </label>
+                            <br>
+                            <input type="text" id="first-name" name="first-name" required pattern="[a-zA-Z]+"/>
+                            <br>
+                            <label for="last-name">Last name: </label>
+                            <br>
+                            <input type="text" id="last-name" name="last-name" required pattern="[a-zA-Z]+"/>
+                        </div>
+                        <div id="contacts-two">
+                            <label for="email">E-mail: </label>
+                            <br>
+                            <input type="email" id="email" name="email" required />
+                            <br>
+                            <label for="phone">Phone number (optional): </label>
+                            <br>
+                            <input type="text" id="phone" name="phone" pattern="[0-9]{7, 11}" />
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" id="submit-btn" value="Get in touch"/>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>@2024 All Rights Reserved</p>
+            <p>Created with the help of Codecademy</p>
+        </footer>
+    </body>
 </html>

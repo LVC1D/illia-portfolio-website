@@ -18,8 +18,13 @@ h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
-p, footer, nav {
+p, footer, nav, label {
     font-family: 'Playfair Display', serif;
+}
+
+main {
+    position: relative;
+    top: 80px;
 }
 
 /* header */
@@ -31,6 +36,7 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -43,26 +49,64 @@ nav li {
     color: rgb(231, 235, 236);
     margin: 0 3rem;
     list-style: none;
-    border-bottom: 1px solid rgb(231, 235, 236);
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    border: 1.5px solid #848586;
+    width: 120px;
+    text-align: center;
+    height: 40px;
+}
+
+nav li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    border: 1px solid rgb(231, 235, 236);
+}
+
+nav li:active {
+    background-color: #baa898;
+    color: #280003;
+    text-decoration: none;
+}
+
+nav li:visited {
+    color: rgb(231, 235, 236); 
 }
 
 /* Hero */
-
-main {
-    position: relative;
-    top: 80px;
-}
 
 #banner {
     background-image: url('./resources/banner-bg.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     text-align: center;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+#banner::before {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 3;
+    filter: blur(50px);
+}
+
+#headings {
+    height: 50%;
+    z-index: 5;
+    position: relative;
+    color: rgb(231, 235, 236); 
 }
 
 #banner h1 {
@@ -92,6 +136,103 @@ main {
 #skills .container {
     display: flex;
     justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 2%;
+}
+
+#skills .container-item {
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+#skills .container-item input,
+form #submit-btn {
+    background-color: white;
+    border: 1px solid #280003;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Playfair Display';
+    width: auto;
+    max-width: 150px;
+    height: 30px;
+    font-size: 1.025em;
+    padding: auto;
+}
+
+/* Contact Form */
+
+#contact-details {
+    text-align: center;
+    margin: 0 4%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 2% 2rem;
+}
+
+.contact-item {
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.contact-item a {
+    color: #280003;
+    border: 1px solid #2800034b; 
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item a:active {
+    background-color: #280003;
+    color: rgb(231, 235, 236);
+    border: 1px solid rgb(231, 235, 236);
+}
+
+.contact-item img {
+    max-width: 120px;
+    height: auto;
+}
+
+.form-fields {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+#contacts-one input,
+#contacts-two input {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 200px;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#submit-btn {
+    width: 350px !important;
+    height: 50px !important;
+}
+
+#contact-details h2 {
+    font-size: 2.25rem;
+}
+
+form h3 {
+    font-size: 1.75rem;
 }
 
 /* Footer */

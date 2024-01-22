@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
-    <title>Illia's Portfolio</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li href="#">Home</li>
-                <li href="#skills">My Skills</li>
-                <li><a href="./projects.html">My Projects</a></li>
-                <li><a href="./contact-me.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Hero Banner -->
-        <div id="banner">
-            <div id="headings">
-                <h1 id="main-header">Illia's Portfolio Site</h1>
-                <h2>Hi there, and welcome!</h2>
-            </div>
-        </div>
-        
-        <!-- Skills Showcase (in Flex) -->
-        <div id="skills">
-            <h2>My specialties</h2>
-            <div class="container">
-                <div class="container-item">
-                    <h3>HTML</h3>
-                </div>
-                <div class="container-item">
-                    <h3>CSS</h3>
-                </div>
-                <div class="container-item">
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="container-item">
-                    <h3>Git</h3>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js" defer></script>
+        <title>Illia's Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li href="#">Home</li>
+                    <li href="#skills">My Skills</li>
+                    <a href="./projects.html"><li>My Projects</li></a>
+                    <a href="./contact-me.html"><li>Contact Me</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Hero Banner -->
+            <div id="banner">
+                <div id="headings">
+                    <h1 id="main-header">Illia's Portfolio Site</h1>
+                    <h2 id="sub-header">Hi there, and welcome!</h2>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>@2024 All Rights Reserved</p>
-        <p>Created with the help of Codecademy</p>
-    </footer>
-</body>
+            
+            <!-- Skills Showcase (in Flex) -->
+            <div id="skills">
+                <h2>My specialties</h2>
+                <hr>
+                <div class="container">
+                    <div class="container-item" id="html-item">
+                        <h3>HTML</h3>
+                        <input type="button" value="Read more" id="html-more"/>
+                    </div>
+                    <div class="container-item" id="css-item">
+                        <h3>CSS</h3>
+                        <input type="button" value="Read more" id="css-more"/>
+                    </div>
+                    <div class="container-item" id="js-item">
+                        <h3>JavaScript</h3>
+                        <input type="button" value="Read more" id="js-more"/>
+                    </div>
+                    <div class="container-item" id="git-item">
+                        <h3>Git</h3>
+                        <input type="button" value="Read more" id="git-more"/>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>@2024 All Rights Reserved</p>
+            <p>Created with the help of Codecademy</p>
+        </footer>
+    </body>
 </html>
